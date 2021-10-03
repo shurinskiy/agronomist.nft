@@ -2,7 +2,7 @@
 @include reset(); 
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -40,6 +40,7 @@ $breakpoints: (
 
 
 	@include font-face("Montserrat-Regular", "MR");
+	@include font-face("Montserrat-Medium", "MM");
 	@include font-face("Montserrat-SemiBold", "MSB");
 	@include font-face("Montserrat-Bold", "MB");
 	@include font-face("Montserrat-ExtraBold", "MEB");

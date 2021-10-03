@@ -3,6 +3,11 @@
 	background: url('./images/hero-bg.png') center bottom / auto no-repeat transparent;
 	padding: 30px 0 180px;
 
+	@include media('<=xs') {
+		padding-top: 0;
+	}
+
+
 	&__inner {
 		display: flex;
 	}
@@ -10,6 +15,18 @@
 	&__info {
 		flex-grow: 1;
 		padding-top: 65px;
+		
+		@include media('<=xxlg') {
+			padding-top: 40px;
+		}
+		
+		@include media('<=xlg') {
+			padding-top: 20px;
+		}
+
+		@include media('<=xs') {
+			padding-top: 0;
+		}
 	}
 	
 	&__title {
@@ -19,6 +36,26 @@
 		line-height: 1.1;
 		text-transform: uppercase;
 		margin-bottom: 45px;
+		
+		@include media('<=xxxlg') {
+			font-size: 60px;
+		}
+		
+		@include media('<=md') {
+			font-size: 64px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 53px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 44px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 34px;
+		}
 	}
 	
 	&__subtitle {
@@ -29,6 +66,18 @@
 		
 		span {
 			color: #69BA43;
+		}
+		
+		@include media('<=xs') {
+			font-size: 40px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 38px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 36px;
 		}
 	}
 	
@@ -63,6 +112,7 @@
 	
 	&__buttons {
 		display: flex;
+		flex-flow: row wrap;
 		align-items: flex-start;
 	}
 	
@@ -80,10 +130,16 @@
 		border-radius: 42px;
 		min-width: 280px;
 		text-align: center;
-		margin-right: 20px;
+		margin: 0 20px 20px 0;
+		
+		@include media('<=xxxs') {
+			margin: 0 0 20px 0;
+		}
 	}
 	
 	&__button-set {
+		margin-bottom: 20px;
+
 		p {
 			font-family: "MB", sans-serif;
 			font-size: 12px;
@@ -120,6 +176,26 @@
 		background: url('./images/hero-decor.svg') center / contain no-repeat transparent;
 		margin-right: -80px;
 
+		@include media('<=xxlg') {
+			width: 600px;
+			height: 600px;
+			margin-right: 0;
+		}
+
+		@include media('<=xlg') {
+			width: 550px;
+			height: 550px;
+		}
+
+		@include media('<=lg') {
+			width: 480px;
+			height: 480px;
+		}
+
+		@include media('<=md') {
+			display: none;
+		}
+
 		&::before {
 			display: block;
 			box-sizing: border-box;
@@ -130,7 +206,22 @@
 			box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.35);
 			border-radius: 20px;
 			background: url('./images/q-mark.svg') center / auto no-repeat #69BA43;
-			;
+
+			@include media('<=xxlg') {
+				width: 370px;
+				height: 370px;
+				background-size: auto 90%;
+			}
+
+			@include media('<=xlg') {
+				width: 355px;
+				height: 355px;
+			}
+
+			@include media('<=lg') {
+				width: 320px;
+				height: 320px;
+			}
 		}
 	}
 }

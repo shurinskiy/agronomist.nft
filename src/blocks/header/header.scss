@@ -6,6 +6,10 @@
 		display: flex;
 		align-items: center;
 		min-height: 80px;
+
+		@include media('<=xs') {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__logo {
@@ -14,15 +18,19 @@
 		line-height: 1.1;
 		color: #69BA43;
 		text-decoration: none;
-		padding: 15px 10px 15px 80px;
+		padding: 17px 10px 17px 80px;
 		background: url('./images/logo.svg') center left / 60px 60px no-repeat transparent;
+		margin: 10px auto 10px 0;
 	}
 
 	&__socials {
 		display: flex;
 		align-items: center;
-		margin-left: auto;
-		padding: 10px;
+		margin-right: 25px;
+		
+		@include media('<=xs') {
+			margin: 10px auto;
+		}
 	}
 
 	&__social {
@@ -32,7 +40,6 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-color: transparent;
-		margin-right: 25px;
 
 		&:not(:last-child) {
 			margin-right: 25px;
@@ -60,5 +67,10 @@
 		min-width: 155px;
 		text-align: center;
 		border-radius: 40px;
+		margin: 20px 0;
+		
+		@include media('<=xs') {
+			margin: 20px auto;
+		}
 	}
 }
