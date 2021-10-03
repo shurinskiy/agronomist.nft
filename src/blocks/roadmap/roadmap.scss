@@ -1,0 +1,115 @@
+.roadmap {
+	$self: &;
+	background: url('./images/roadmap-bottom-bg.svg') center bottom / auto no-repeat transparent;
+	position: relative;
+
+	&::before {
+		display: block;
+		content: '';
+		width: 650px;
+		height: 360px;
+		background: url('./images/clouds-blue-left.svg') left top / auto no-repeat transparent;
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		width: 910px;
+		height: 400px;
+		background: url('./images/clouds-blue-right.svg') right top / auto no-repeat transparent;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		top: 30px;
+	}
+
+	&__title {
+		text-align: center;
+		font-family: "MSB", sans-serif;
+		font-size: 48px;
+		line-height: 1.2;
+		color: #69BA43;
+		margin-bottom: 45px;
+	}
+	
+	&__inner {
+		
+	}
+	
+	&__list {
+		font-size: 18px;
+		line-height: 1.2;
+		counter-reset: roadmap-ctr;
+		margin-bottom: 70px;
+	}
+	
+	&__list-item {
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		background-color: #69BA43;
+		color: #fff;
+		margin-bottom: 30px;
+		padding: 18px 30px 18px 110px;
+		border-radius: 50px;
+		min-height: 100px;
+		position: relative;
+		z-index: 2;
+
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			counter-increment: roadmap-ctr;
+			content: counter(roadmap-ctr);
+			position: absolute;
+			z-index: 3;
+			left: 10px; top: 10px;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-color: #fff;
+			color: #69BA43;
+			font-family: "A", sans-serif;
+			font-size: 64px;
+		}
+
+		p {
+			font-family: "MSB", sans-serif;
+			margin: 0;
+		}
+		
+		span {
+			font-family: "MB", sans-serif;
+		}
+	
+		&:nth-child(1) {
+			max-width: 470px;
+		}
+	
+		&:nth-child(2) {
+			max-width: 680px;
+		}
+	
+		&:nth-child(3) {
+			max-width: 940px;
+		}
+	
+		&:nth-child(4) {
+			max-width: 610px;
+		}
+	
+		&:nth-child(5) {
+			max-width: 780px;
+		}
+	
+		&:nth-child(6) {
+			max-width: 980px;
+		}
+	}
+}

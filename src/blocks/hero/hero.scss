@@ -1,0 +1,136 @@
+.hero {
+	$self: &;
+	background: url('./images/hero-bg.png') center bottom / auto no-repeat transparent;
+	padding: 30px 0 180px;
+
+	&__inner {
+		display: flex;
+	}
+
+	&__info {
+		flex-grow: 1;
+		padding-top: 65px;
+	}
+	
+	&__title {
+		color: #69BA43;
+		font-family: "MB", sans-serif;
+		font-size: 64px;
+		line-height: 1.1;
+		text-transform: uppercase;
+		margin-bottom: 45px;
+	}
+	
+	&__subtitle {
+		font-family: "MB", sans-serif;
+		font-size: 48px;
+		line-height: 1.2;
+		margin-bottom: 30px;
+		
+		span {
+			color: #69BA43;
+		}
+	}
+	
+	&__date {
+		font-family: "MB", sans-serif;
+		font-size: 24px;
+		line-height: 1.1;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		
+		span {
+			font-family: "MSB", sans-serif;
+		}
+	}
+	
+	&__list {
+		margin-bottom: 35px;
+	}
+	
+	&__list-item {
+		font-family: "MSB", sans-serif;
+		font-size: 18px;
+		line-height: 1.1;
+		margin-bottom: 20px;
+		
+		span, a {
+			font-family: "MB", sans-serif;
+			text-decoration: none;
+			color: #69BA43;
+		}
+	}
+	
+	&__buttons {
+		display: flex;
+		align-items: flex-start;
+	}
+	
+	&__button-timer {
+		box-sizing: border-box;
+		font-family: "MSB", sans-serif;
+		font-size: 24px;
+		line-height: 1.2;
+		text-transform: uppercase;
+		white-space: nowrap;
+		text-decoration: none;
+		color: #fff;
+		background-color: #69BA43;
+		padding: 18px;
+		border-radius: 42px;
+		min-width: 280px;
+		text-align: center;
+		margin-right: 20px;
+	}
+	
+	&__button-set {
+		p {
+			font-family: "MB", sans-serif;
+			font-size: 12px;
+			line-height: 1.2;
+			max-width: 270px;
+			margin: 10px auto 0;
+		}
+	}
+	
+	&__button-join {
+		display: block;
+		box-sizing: border-box;
+		font-family: "MSB", sans-serif;
+		font-size: 24px;
+		line-height: 1.2;
+		text-transform: uppercase;
+		white-space: nowrap;
+		text-decoration: none;
+		border: 2px solid #000;
+		color: #000;
+		padding: 18px;
+		border-radius: 42px;
+		min-width: 280px;
+		text-align: center;
+	}
+	
+	&__sign {
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 635px;
+		height: 655px;
+		background: url('./images/hero-decor.svg') center / contain no-repeat transparent;
+		margin-right: -80px;
+
+		&::before {
+			display: block;
+			box-sizing: border-box;
+			content: '';
+			width: 420px;
+			height: 420px;
+			border: 30px solid #fff;
+			box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.35);
+			border-radius: 20px;
+			background: url('./images/q-mark.svg') center / auto no-repeat #69BA43;
+			;
+		}
+	}
+}

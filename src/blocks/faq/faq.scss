@@ -1,0 +1,65 @@
+.faq {
+	$self: &;
+	padding: 50px 0 40px;
+	color: #fff;
+	background: url('./images/faq-bottom-bg.svg') center bottom / auto no-repeat #69BA43;
+
+	&__title {
+		text-align: center;
+		font-family: "MB", sans-serif;
+		font-size: 48px;
+		line-height: 1.2;
+		color: #fff;
+		margin-bottom: 40px;
+	}
+
+	&__items {
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 -10px;
+	}
+
+	&__item {
+		margin: 0 10px 40px;
+		width: calc(100% / 3 - 20px);
+	}
+
+	&__item-title {
+		font-family: "MEB", sans-serif;
+		margin-bottom: 10px;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+	
+	&__item-text {
+		font-family: "MR", sans-serif;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	&__socials {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__social {
+		display: block;
+		width: 54px;
+		height: 54px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: transparent;
+
+		&:not(:last-child) {
+			margin-right: 25px;
+		}
+	
+		&_dsc {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-discord-view-white');
+		}
+
+		&_twt {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-twitter-view-white');
+		}
+	}
+}
